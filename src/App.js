@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Component } from "react";
+import CardList from "./components/card-list/card-list.component";
+import SearchBox from "./components/search-box/search-box.component";
 
 class App extends Component {
   constructor() {
@@ -36,19 +38,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input
+        <SearchBox
           className="search-box"
-          type="search"
           placeholder="search coins"
-          onChange={onSearchChange}
+          onChangeHandler={onSearchChange}
         />
-        {filteredCoins.map((coin) => {
-          return (
-            <div key={coin.id}>
-              <h1>{coin.name}</h1>
-            </div>
-          );
-        })}
+        <CardList coins={filteredCoins} />
       </div>
     );
   }
