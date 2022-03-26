@@ -9,17 +9,17 @@ body {
   text-align: center;
   background: linear-gradient(
           to left,
-          rgba(7, 27, 82, 1) 0%,
-          rgba(0, 128, 128, 1) 100%
+          rgb(19, 20, 21) 0%,
+          rgb(19, 20, 21) 100%
   ) no-repeat fixed;
+  color: #e1e1e1;
 }
 
 .app-title {
   margin-top: 75px;
   margin-bottom: 50px;
   font-size: 76px;
-  color: #0ccac4;
-  font-family: 'Russo One'
+  font-family: 'Russo One', sans-serif
 }
 
 

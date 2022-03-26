@@ -9,7 +9,7 @@ class Card extends Component {
       <div className="card-container" key={id}>
         <h2>{name}</h2>
         <img src={image} alt={name} />
-        <p>RM {price}</p>
+        <h4>RM {price}</h4>
       </div>
     );
   }
