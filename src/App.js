@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
+import Scroll from "./components/scroll/scroll.component";
 
 const App = () => {
   const [search, setSearch] = useState("");
@@ -9,7 +10,7 @@ const App = () => {
   const [filteredCoins, setFilteredCoins] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/v1/coins")
+    fetch("https://crypto-coins-list-server.herokuapp.com/v1/coins")
       .then((response) => response.json())
       .then((data) => setCoins(data))
       .catch((error) => console.log(error));
@@ -34,7 +35,9 @@ const App = () => {
         placeholder="search coins"
         onChangeHandler={onSearchChange}
       />
-      <CardList coins={filteredCoins} />
+      <Scroll>
+        <CardList coins={filteredCoins} />
+      </Scroll>
     </div>
   );
 };

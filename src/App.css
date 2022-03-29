@@ -22,9 +22,9 @@ body {
   font-family: 'Russo One', sans-serif
 }
 
-@media screen and (min-width: 0px) and (max-width: 500px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
   .app-title {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
